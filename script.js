@@ -1,11 +1,11 @@
-const cloudImageMap = {
+/*const cloudImageMap = {
     "clear sky": "url('https://example.com/clear-sky.jpg')",
     "few clouds": "url('https://example.com/few-clouds.jpg')",
     "scattered clouds": "url('https://example.com/scattered-clouds.jpg')",
     "overcast clouds": "url('https://example.com/overcast-clouds.jpg')",
     "rain": "url('https://example.com/rainy.jpg')",
     // Add other types of clouds with appropriate images
-};
+};*/
 
 let cityName = document.getElementById("city-name")
 let cityTemp = document.getElementById("city-temp")
@@ -16,7 +16,7 @@ let displayedCities = []
 formContainer.addEventListener("submit", (e) => {
     e.preventDefault()
     //console.log(e)
-    //console.log("city Name is", cityName.value)
+    console.log("city Name is", cityName.value)
     /*if(cityName.value==""){
         alert("it should not be empty") // a if conditionkay place may required likhay tho hojata 
     }*/ 
@@ -45,7 +45,7 @@ formContainer.addEventListener("submit", (e) => {
             // displayedCities.push(cityName.value.toLowerCase());
             const div = document.createElement("div")
             div.classList.add("city")
-            displayedCities.push(res.id)
+            displayedCities.push(res.id)//duplicates allow nai karnay
             const { main, sys, name,weather} = res//Destructuring katho hona hey so data pic karlena
             let result = `
         <div>
@@ -57,11 +57,11 @@ formContainer.addEventListener("submit", (e) => {
         </p>
         </div>
         `
-        if(div.value=="overcast clouds"){
+        /*if(div.value=="overcast clouds"){
 
-        }
-            // div.innerHTML = result
-            // cityTemp.appendChild(div)
+        }*/
+            div.innerHTML = result
+            cityTemp.appendChild(div)
             // if(weather[0].description=="overcast clouds")
             // {
             //     const divCloud=document.createElement(clouds)
