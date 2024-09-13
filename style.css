@@ -1,0 +1,17 @@
+body{
+    /* background-image: url(""); */
+    background-color: lightskyblue;
+}
+#city-temp{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap: 10%;
+}
+.city{
+    box-shadow: 1px 12px 5px rgba(134, 220, 242, 0.9);
+    border-radius: 15px ;
+    padding: 10%;
+    margin-top: 10%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/042/195/725/non_2x/ai-generated-rainy-sky-background-free-photo.jpg");
+    background-size: cover;
+}
